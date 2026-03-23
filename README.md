@@ -8,17 +8,17 @@
 
 > Interactive ML-powered dashboard using K-Means clustering to segment customers based on behavioral and demographic data — enabling businesses to design data-driven, personalized marketing strategies with real-time predictions and automated insights.
 
-**🔗 [Live Demo](https://customer-segmentation-dashboard.streamlit.app)** | **📊 [View Dashboard](https://customer-segmentation-dashboard.streamlit.app)**
+**🔗 [Live Dashboard](https://customer-segmentation-dashboard-afbbjy6d7yns9ytcb6v6p2.streamlit.app/)** | **📊 [Try It Now](https://customer-segmentation-dashboard-afbbjy6d7yns9ytcb6v6p2.streamlit.app/)**
 
 ---
 
 ## 📌 Project Overview
 
-Customer segmentation transforms raw customer data into actionable business intelligence. This project applies **K-Means clustering** (unsupervised machine learning) to automatically group customers into 5 distinct segments based on purchasing behavior, demographics, and engagement patterns.
+Customer segmentation transforms raw customer data into actionable business intelligence. This project applies **K-Means clustering** (unsupervised machine learning) to automatically group customers into **5 distinct segments** based on purchasing behavior, demographics, and engagement patterns.
 
 **Business Impact:** Companies using customer segmentation see **10-30% increases in marketing ROI** by targeting the right customers with the right messages at the right time.
 
-**Key Innovation:** Real-time interactive Streamlit dashboard allowing marketers to explore segments, understand customer behavior, predict new customer segments, and receive automated marketing strategy recommendations — all without writing a single line of code.
+**Key Innovation:** Real-time interactive Streamlit dashboard allowing marketers to explore segments, understand customer behavior, **predict new customer segments**, and receive **automated marketing strategy recommendations** — all without writing a single line of code.
 
 ---
 
@@ -26,16 +26,16 @@ Customer segmentation transforms raw customer data into actionable business inte
 
 - ✅ **K-Means Clustering Algorithm** — unsupervised learning for automatic customer grouping
 - ✅ **Interactive Streamlit Dashboard** — explore segments in real-time without coding
-- ✅ **5 Customer Segments** — VIP, Budget Shoppers, Young Professionals, Inactive, Regular
-- ✅ **PCA Visualization** — stunning 2D scatter plot with color-coded clusters
-- ✅ **Smart Preprocessing** — automatic handling of missing values, outliers, and scaling
+- ✅ **5 Customer Segments** — Loyal Customers, Budget Shoppers, Young Professionals, Premium, Regular
+- ✅ **PCA Visualization** — stunning 2D scatter plot with 5 color-coded clusters
+- ✅ **Smart Preprocessing** — automatic handling of missing values, outliers, and feature scaling
 - ✅ **Feature Engineering** — extracts meaningful patterns from raw customer data
-- ✅ **Marketing Strategy Recommendations** — actionable insights per segment
-- ✅ **Predict New Customer Segment** — real-time prediction module for new customers
+- ✅ **Marketing Strategy Recommendations** — actionable insights per segment (e.g., "Loyal Customers → Loyalty Rewards")
+- ✅ **Predict New Customer Segment** — real-time prediction module with interactive form
 - ✅ **Customer Segments Table** — detailed view of all customers with cluster assignments
-- ✅ **Cluster Distribution Chart** — bar chart showing segment sizes
-- ✅ **Cloud Deployment** — accessible anywhere via Streamlit Cloud
-- ✅ **Dataset Explorer** — preview and analyze raw customer data
+- ✅ **Cluster Distribution Chart** — bar chart showing segment sizes and proportions
+- ✅ **Cloud Deployment** — live on Streamlit Cloud, accessible from anywhere
+- ✅ **Dataset Explorer** — preview raw customer data with statistics
 
 ---
 
@@ -44,22 +44,50 @@ Customer segmentation transforms raw customer data into actionable business inte
 ### 1. Dataset Preview & Cluster Distribution
 ![Dataset Preview](screenshots/dataset_preview.png)
 
-View raw customer data and cluster distribution bar chart showing segment sizes.
+**Features shown:**
+- Customer dataset table with ID, Year_Birth, Education, Marital_Status, Income, Kidhome, Teenhome, Dt_Customer, Recency
+- Cluster distribution bar chart showing 5 segments with approximately equal sizes (~450 customers each)
 
-### 2. Customer Segmentation Visualization (PCA)
-![Cluster Visualization](screenshots/cluster_visualization.png)
+---
 
-Beautiful 2D scatter plot with 5 color-coded clusters demonstrating clear separation.
+### 2. Marketing Strategy Recommendations & Prediction Module
+![Marketing Recommendations](screenshots/marketing_recommendations.png)
+
+**Interactive features:**
+- **Dropdown selector** to choose customer cluster (0-4)
+- **Automated marketing strategy** per segment (e.g., "Loyal Customers → Loyalty Rewards")
+- **Predict New Customer Segment** form with input fields:
+  - ID, Year_Birth, Income, Kidhome, Teenhome
+- Real-time segment prediction with "Predict Segment" button
+
+---
 
 ### 3. Customer Segments Table
 ![Segments Table](screenshots/segments_table.png)
 
-Detailed customer list with cluster assignments and demographic information.
+**Detailed customer data:**
+- Full customer list with all 2,240 customers
+- Columns: ID, Year_Birth, Education, Marital_Status, Income, Kidhome, Teenhome, Dt_Customer, Recency
+- Cluster assignments visible for each customer
+- Sortable and filterable table
+- Small preview of PCA visualization thumbnail in bottom-right
 
-### 4. Marketing Strategy Recommendations & Prediction
-![Marketing Recommendations](screenshots/marketing_recommendations.png)
+---
 
-Automated marketing strategies per segment and real-time customer segment prediction.
+### 4. Customer Segmentation Visualization (PCA)
+![Cluster Visualization](screenshots/cluster_visualization.png)
+
+**Beautiful 2D PCA scatter plot:**
+- **5 color-coded clusters:**
+  - 🟢 Cluster 0 (Teal) — bottom-left quadrant
+  - 🟠 Cluster 1 (Orange) — right side
+  - 🔵 Cluster 2 (Blue) — bottom-right
+  - 🟣 Cluster 3 (Pink) — top-center (largest cluster)
+  - 🟡 Cluster 4 (Yellow-green) — left-center
+- Clear visual separation between segments
+- Legend showing all 5 clusters
+- Professional matplotlib styling
+- X and Y axes representing PCA components
 
 ---
 
@@ -67,12 +95,12 @@ Automated marketing strategies per segment and real-time customer segment predic
 
 | Feature | What It Does |
 |---|---|
-| **📊 Dataset Explorer** | View raw customer data with statistical summaries |
-| **🎨 Cluster Visualization** | Interactive 2D PCA scatter plot showing customer segments |
-| **📈 Distribution Analysis** | Bar chart displaying cluster sizes and proportions |
-| **💡 Marketing Insights** | Automated marketing strategy recommendations per segment |
-| **🔮 Segment Predictor** | Input new customer data → instant cluster assignment |
-| **📋 Segments Table** | Complete customer list with cluster labels |
+| **📊 Dataset Explorer** | View raw customer data with first 100 rows and statistical summaries |
+| **📈 Cluster Distribution** | Bar chart displaying segment sizes (Cluster 0: ~450, Cluster 1: ~400, etc.) |
+| **🎨 PCA Visualization** | Interactive 2D scatter plot showing clear separation of 5 customer segments |
+| **💡 Marketing Insights** | Automated strategy recommendations per segment (dropdown selector) |
+| **🔮 Segment Predictor** | Input new customer data (ID, birth year, income, kids, teens) → instant cluster assignment |
+| **📋 Segments Table** | Complete customer list (2,240 customers) with cluster labels and demographics |
 
 ---
 
@@ -91,12 +119,12 @@ Automated marketing strategies per segment and real-time customer segment predic
 ```python
 # Key features used for segmentation:
 - Year_Birth → Age calculation
-- Education (Graduation, PhD, Master, etc.)
-- Marital_Status (Single, Together, Married, Divorced)
+- Education (Graduation, PhD, Master, Basic, 2n Cycle)
+- Marital_Status (Single, Together, Married, Divorced, Widow)
 - Income (Annual household income)
 - Kidhome (Number of children at home)
 - Teenhome (Number of teenagers at home)
-- Dt_Customer → Customer recency
+- Dt_Customer → Customer acquisition date, recency
 - Recency (Days since last purchase)
 ```
 
@@ -124,9 +152,9 @@ pca = PCA(n_components=2)
 pca_features = pca.fit_transform(scaled_features)
 ```
 
-### 6. Interactive Visualization
+### 6. Interactive Dashboard
 ```python
-# Beautiful Streamlit dashboard with Matplotlib integration
+# Beautiful Streamlit dashboard with Matplotlib
 import streamlit as st
 import matplotlib.pyplot as plt
 
@@ -146,7 +174,7 @@ st.dataframe(customer_segments_table)
 | **NumPy** | Numerical computations |
 | **Scikit-learn** | K-Means clustering, PCA, StandardScaler |
 | **Matplotlib** | PCA scatter plot visualization |
-| **Seaborn** | Enhanced statistical plots |
+| **Seaborn** | Enhanced statistical plots (not used in final version) |
 | **Streamlit** | Interactive web dashboard framework |
 | **Streamlit Cloud** | Free cloud deployment platform |
 
@@ -198,7 +226,7 @@ Network URL: http://192.168.x.x:8501
 customer-segmentation-dashboard/
 │
 ├── app.py                  # Main Streamlit dashboard application
-├── new.csv                 # Customer dataset
+├── new.csv                 # Customer dataset (2,240 customers)
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project documentation (this file)
 │
@@ -208,12 +236,9 @@ customer-segmentation-dashboard/
 │   ├── segments_table.png
 │   └── marketing_recommendations.png
 │
-├── model/
-│   ├── clustering_model.pkl    # Saved K-Means model
-│   └── scaler.pkl              # Saved StandardScaler
-│
-└── outputs/
-    └── clusters.csv        # Segmented customer data with labels
+└── model/
+    ├── clustering_model.pkl    # Saved K-Means model
+    └── scaler.pkl              # Saved StandardScaler
 ```
 
 ---
@@ -222,56 +247,65 @@ customer-segmentation-dashboard/
 
 ### 5 Customer Segments Identified:
 
-| Cluster | Segment Name | Size | Characteristics | Marketing Strategy |
+| Cluster | Segment Name | Approx. Size | Key Characteristics | Marketing Strategy |
 |---|---|---|---|---|
-| **0** | 🌟 Loyal Customers | ~450 (21%) | High income, frequent purchases, long tenure | VIP loyalty rewards, early access, exclusive events |
-| **1** | 💰 Budget Shoppers | ~400 (19%) | Mid-to-low income, price-sensitive shoppers | Flash sales, discount codes, bundle offers |
-| **2** | 👔 Young Professionals | ~180 (8%) | Mid income, trend-focused, fewer kids | Social media ads, influencer partnerships |
-| **3** | 💎 Premium Segment | ~450 (21%) | High income, educated, married with kids | Premium products, family packages |
-| **4** | 🏠 Regular Customers | ~450 (21%) | Consistent moderate spending | Email newsletters, seasonal promotions |
+| **0** | 🟢 Loyal Customers | ~450 (20%) | High income, frequent purchases, long tenure | VIP loyalty rewards, early product access, exclusive events |
+| **1** | 🟠 Budget Shoppers | ~400 (18%) | Mid-to-low income, price-sensitive shoppers | Flash sales, discount codes, bundle offers |
+| **2** | 🔵 Young Professionals | ~180 (8%) | Mid income, trend-focused, fewer children | Social media campaigns, influencer partnerships |
+| **3** | 🟣 Premium Segment | ~760 (34%) | High income, educated, married with kids | Premium products, family packages, personalized service |
+| **4** | 🟡 Regular Customers | ~450 (20%) | Consistent moderate spending, balanced profile | Email newsletters, seasonal promotions, referral programs |
 
 ### Model Performance Metrics:
-- **Silhouette Score:** 0.42 (moderate cluster separation)
-- **Inertia:** 12,847 (within-cluster variance)
-- **Optimal Clusters:** 5 segments (via Elbow Method)
-- **PCA Explained Variance:** 45.2% (first 2 components)
-- **Total Customers Analyzed:** 2,240
+- **Total Customers:** 2,240
+- **Number of Clusters:** 5
+- **Clustering Algorithm:** K-Means
+- **PCA Components:** 2 (for visualization)
+- **Features Used:** 8 (Year_Birth, Education, Marital_Status, Income, Kidhome, Teenhome, Dt_Customer, Recency)
 
 ---
 
 ## 💡 Business Use Cases
 
 ### Marketing Teams:
-- 🎯 **Campaign Targeting:** Send personalized emails to each segment
-- 📧 **Email Personalization:** Tailor messaging by customer type
-- 💸 **Budget Allocation:** Focus ad spend on high-value segments
-- 🎁 **Promotion Design:** Create segment-specific offers
+- 🎯 **Campaign Targeting:** Send personalized email campaigns to each segment
+- 📧 **Email Personalization:** Tailor messaging and offers by customer type
+- 💸 **Budget Allocation:** Focus ad spend on high-value segments (Clusters 0, 3)
+- 🎁 **Promotion Design:** Create segment-specific offers (discounts for Cluster 1, premium for Cluster 3)
 
 ### Product Teams:
 - 🛍️ **Product Recommendations:** Suggest relevant items per segment
-- 📦 **Inventory Planning:** Stock products popular with each group
-- 🆕 **New Product Launch:** Test with most receptive segments first
+- 📦 **Inventory Planning:** Stock products popular with dominant segments
+- 🆕 **New Product Launch:** Test with most receptive segments first (Cluster 2, 4)
 
 ### Sales Teams:
-- 💰 **Upselling Opportunities:** Identify customers ready for premium products
-- 🔄 **Churn Prevention:** Target inactive segments with retention offers
-- 🔮 **Lead Scoring:** Predict new customer value before acquisition
-- 📞 **Prioritized Outreach:** Focus on high-potential segments
+- 💰 **Upselling Opportunities:** Identify Cluster 3 customers ready for premium products
+- 🔄 **Churn Prevention:** Target Cluster 2 (small size) with retention offers
+- 🔮 **Lead Scoring:** Predict new customer value using segment prediction module
+- 📞 **Prioritized Outreach:** Focus on Clusters 0 and 3 (high-value segments)
 
 ### Executives:
-- 📊 **Customer Insights:** Understand customer base composition
-- 📈 **Revenue Optimization:** Prioritize high-value customer acquisition
-- 🎯 **Strategic Planning:** Data-driven market segmentation decisions
-- 💼 **Competitive Advantage:** Personalization at scale
+- 📊 **Customer Insights:** 34% of customers are in Premium segment (Cluster 3)
+- 📈 **Revenue Optimization:** Prioritize acquisition strategies for Clusters 0 and 3
+- 🎯 **Strategic Planning:** Balance portfolio across all 5 segments
+- 💼 **Competitive Advantage:** Data-driven personalization at scale
 
 ---
 
-## 🌐 Deployment
+## 🌐 Live Deployment
 
-### Live Dashboard
-**🔗 Production URL:** [Customer Segmentation Dashboard](https://customer-segmentation-dashboard.streamlit.app)
+### 🚀 Live Dashboard
+**🔗 Production URL:** [https://customer-segmentation-dashboard-afbbjy6d7yns9ytcb6v6p2.streamlit.app/](https://customer-segmentation-dashboard-afbbjy6d7yns9ytcb6v6p2.streamlit.app/)
 
-Deployed on **Streamlit Cloud** — no installation required, accessible from any device with internet connection.
+**Deployed on Streamlit Cloud** — no installation required, accessible from any device with internet.
+
+**Try these features:**
+1. Scroll to view **Dataset Preview** and **Cluster Distribution** chart
+2. Explore the **Customer Segmentation Visualization** (beautiful PCA plot)
+3. Check **Customer Segments Table** to see cluster assignments
+4. Use **Marketing Strategy Recommendations** dropdown to see strategies per cluster
+5. Try **Predict New Customer Segment** by entering customer details
+
+---
 
 ### Deploy Your Own Copy:
 
@@ -289,43 +323,20 @@ Your dashboard will be live in 2-3 minutes! 🚀
 
 ## 🔮 Future Roadmap
 
-**Planned Features:**
+**Planned Enhancements:**
 
-- [ ] **Elbow Method Visualization** — interactive optimal cluster selection
+- [ ] **Elbow Method Visualization** — show how optimal cluster number (5) was chosen
 - [ ] **Multiple Clustering Algorithms** — compare K-Means, DBSCAN, Hierarchical
-- [ ] **Automated Marketing Recommendations** — AI-generated strategies per segment
-- [ ] **Real-Time Database Integration** — connect to PostgreSQL/MySQL
-- [ ] **Customer Lifetime Value (CLV) Prediction** — forecast customer value
+- [ ] **Enhanced Marketing Recommendations** — AI-generated strategies using LLMs
+- [ ] **Real-Time Database Integration** — connect to PostgreSQL/MySQL for live data
+- [ ] **Customer Lifetime Value (CLV) Prediction** — forecast revenue per customer
 - [ ] **Plotly 3D Visualizations** — interactive 3D cluster exploration
 - [ ] **A/B Testing Framework** — measure campaign effectiveness by segment
 - [ ] **Export Reports** — download segment analysis as PDF/Excel
-- [ ] **User Authentication** — secure multi-user access with roles
-- [ ] **REST API Endpoint** — integrate segmentation into CRM systems
-- [ ] **Segment Evolution Tracking** — monitor customer movement between segments
-- [ ] **Advanced Filters** — filter by education, income, marital status
-
----
-
-## 📊 Sample Dashboard Output
-
-### Cluster Distribution:
-```
-Customer Segment Breakdown:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Loyal Customers:         450 (21%)  🌟🌟🌟🌟🌟
-Budget Shoppers:         400 (19%)  ████████████
-Young Professionals:     180 (8%)   ████
-Premium Segment:         450 (21%)  🌟🌟🌟🌟🌟
-Regular Customers:       450 (21%)  ████████████
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Total Customers: 2,240
-```
-
-### PCA Visualization Features:
-- ✓ Color-coded clusters with distinct boundaries
-- ✓ Clear visual separation between segments
-- ✓ Legend for easy cluster identification
-- ✓ Professional matplotlib styling
+- [ ] **User Authentication** — secure multi-user access with role-based permissions
+- [ ] **REST API Endpoint** — integrate segmentation into existing CRM systems
+- [ ] **Segment Evolution Tracking** — monitor customer movement between segments over time
+- [ ] **Advanced Filters** — filter customers by education, income range, marital status
 
 ---
 
@@ -333,14 +344,14 @@ Total Customers: 2,240
 
 **Complete Workflow:**
 
-1. **📤 Upload Dataset** → CSV file with customer demographic and behavioral data
-2. **🧹 Auto-Preprocessing** → Clean missing values, encode categories, scale features
+1. **📤 Load Dataset** → `new.csv` with 2,240 customer records
+2. **🧹 Auto-Preprocessing** → Clean missing values, encode categories (Education, Marital_Status), scale numerical features
 3. **🤖 K-Means Clustering** → Algorithm groups customers into 5 optimal segments
-4. **📉 PCA Transformation** → Reduce dimensions from 8D to 2D for visualization
-5. **📊 Dashboard Rendering** → Streamlit displays interactive charts and tables
-6. **💡 Marketing Insights** → Automated strategy recommendations per segment
-7. **🔮 Prediction Module** → Input new customer → instant segment assignment
-8. **📥 Export Results** → Download segmented customer data
+4. **📉 PCA Transformation** → Reduce 8 dimensions to 2D for visualization
+5. **📊 Dashboard Rendering** → Streamlit displays dataset, bar chart, PCA plot, table
+6. **💡 Marketing Insights** → Show automated strategy per cluster (dropdown)
+7. **🔮 Prediction Module** → User inputs customer data → model predicts cluster → display result
+8. **📥 Analysis** → Explore segments, understand patterns, design campaigns
 
 ---
 
@@ -349,7 +360,7 @@ Total Customers: 2,240
 ### Understanding K-Means Clustering:
 - [Scikit-learn K-Means Documentation](https://scikit-learn.org/stable/modules/clustering.html#k-means)
 - [Customer Segmentation Guide - Kaggle](https://www.kaggle.com/learn/customer-segmentation)
-- [Introduction to K-Means - Towards Data Science](https://towardsdatascience.com/k-means-clustering)
+- [K-Means Algorithm Explained](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a)
 
 ### Building Streamlit Dashboards:
 - [Streamlit Official Documentation](https://docs.streamlit.io)
@@ -373,11 +384,11 @@ B.Tech CSE (AI/ML) — University of Mumbai (2023–2027)
 
 *Passionate about applying machine learning to solve real-world business problems and create measurable impact through data-driven solutions.*
 
-**Other Projects:**
+**Featured Projects:**
 - 🛡️ [Phishing URL Detection](https://github.com/Khiladi-786/Phishing_Deployment) — 89.63% accuracy cybersecurity system
-- 🎯 [Real-Time Object Detection](https://github.com/Khiladi-786/Real-Time-object-detection-) — YOLOv8 with live webcam
-- 🌾 [Crop Recommendation System](https://github.com/Khiladi-786/Crop-Detection) — Smart agriculture ML
-- 📧 [Email Spam Detection](https://github.com/Khiladi-786/Email-Spam-Detection) — NLP-based classifier
+- 🎯 [Real-Time Object Detection](https://github.com/Khiladi-786/Real-Time-object-detection-) — YOLOv8 with 29 objects detected
+- 🌾 [Crop Recommendation System](https://github.com/Khiladi-786/Crop-Detection) — Smart agriculture ML with Flask
+- 📧 [Email Spam Detection](https://github.com/Khiladi-786/Email-Spam-Detection) — NLP-based TF-IDF classifier
 
 ---
 
@@ -385,17 +396,15 @@ B.Tech CSE (AI/ML) — University of Mumbai (2023–2027)
 
 This project is licensed under the **MIT License** — free to use for educational and commercial purposes.
 
-See [LICENSE](LICENSE) file for complete details.
-
 ---
 
 ## 🙏 Acknowledgments
 
 - **Dataset Source:** Customer segmentation datasets from [Kaggle](https://www.kaggle.com/datasets)
-- **Streamlit Team:** For creating an amazing dashboard framework that makes ML accessible
-- **Scikit-learn Contributors:** For robust, production-ready machine learning algorithms
-- **Marketing Analytics Community:** For domain insights and real-world use case validation
-- **Open Source Community:** For continuous inspiration and collaboration
+- **Streamlit Team:** For creating an accessible, powerful dashboard framework
+- **Scikit-learn Contributors:** For robust, production-ready ML algorithms
+- **Marketing Analytics Community:** For real-world use case validation
+- **Open Source Community:** For continuous inspiration and support
 
 ---
 
@@ -412,17 +421,17 @@ Contributions, issues, and feature requests are welcome!
 5. Open a Pull Request
 
 **Contribution Ideas:**
-- Add new clustering algorithms
-- Improve visualization aesthetics
-- Implement export functionality
-- Add unit tests
-- Enhance documentation
+- Add DBSCAN or Hierarchical clustering
+- Implement Plotly for interactive visualizations
+- Add export functionality (CSV/PDF reports)
+- Create unit tests
+- Improve UI/UX design
 
 ---
 
 ## 📞 Support & Feedback
 
-Found a bug or have a feature request?
+Questions? Issues? Suggestions?
 
 - 🐛 [Report an Issue](https://github.com/Khiladi-786/customer-segmentation-dashboard/issues)
 - 💬 [Start a Discussion](https://github.com/Khiladi-786/customer-segmentation-dashboard/discussions)
@@ -437,14 +446,15 @@ Found a bug or have a feature request?
 
 ## ⭐ Star This Repository ⭐
 
-If you found this project useful, **please give it a star!** It helps others discover this work.
+**If you found this project useful, please give it a star!**  
+It helps others discover this work and motivates continued development.
 
-**🔗 [Live Dashboard](https://customer-segmentation-dashboard.streamlit.app)** | **📖 [Documentation](https://github.com/Khiladi-786/customer-segmentation-dashboard)** | **🐛 [Report Bug](https://github.com/Khiladi-786/customer-segmentation-dashboard/issues)**
+**🔗 [Live Dashboard](https://customer-segmentation-dashboard-afbbjy6d7yns9ytcb6v6p2.streamlit.app/)** | **📖 [Documentation](https://github.com/Khiladi-786/customer-segmentation-dashboard)** | **🐛 [Report Bug](https://github.com/Khiladi-786/customer-segmentation-dashboard/issues)**
 
 ---
 
 *Built with ❤️ by Nikhil More | Transforming data into actionable business intelligence*
 
-**#MachineLearning #DataScience #CustomerSegmentation #Streamlit #Python #KMeans #Marketing #BusinessIntelligence**
+**#MachineLearning #DataScience #CustomerSegmentation #Streamlit #Python #KMeans #BusinessIntelligence #MarketingAnalytics**
 
 </div>

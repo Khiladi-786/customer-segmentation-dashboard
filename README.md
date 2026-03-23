@@ -44,7 +44,7 @@ Customer segmentation transforms raw customer data into actionable business inte
 ### 1. Dataset Preview & Cluster Distribution
 
 <p align="center">
-  <img src="./screenshots/dataset.jpeg" width="800"/>
+  <img src="./screenshots/dashboard.jpeg" width="800"/>
 </p>
 
 **Features shown:**

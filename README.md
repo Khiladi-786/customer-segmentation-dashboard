@@ -43,6 +43,10 @@ Customer segmentation transforms raw customer data into actionable business inte
 
 ### 1. Dataset Preview & Cluster Distribution
 
+<p align="center">
+  <img src="./screenshots/dataset.jpeg" width="800"/>
+</p>
+
 **Features shown:**
 - Customer dataset table with ID, Year_Birth, Education, Marital_Status, Income, Kidhome, Teenhome, Dt_Customer, Recency
 - Cluster distribution bar chart showing 5 segments with approximately equal sizes (~450 customers each)
@@ -50,6 +54,10 @@ Customer segmentation transforms raw customer data into actionable business inte
 ---
 
 ### 2. Marketing Strategy Recommendations & Prediction Module
+
+<p align="center">
+  <img src="./screenshots/marketing.jpeg" width="800"/>
+</p>
 
 **Interactive features:**
 - **Dropdown selector** to choose customer cluster (0-4)
@@ -62,6 +70,10 @@ Customer segmentation transforms raw customer data into actionable business inte
 
 ### 3. Customer Segments Table
 
+<p align="center">
+  <img src="./screenshots/table.jpeg" width="800"/>
+</p>
+
 **Detailed customer data:**
 - Full customer list with all 2,240 customers
 - Columns: ID, Year_Birth, Education, Marital_Status, Income, Kidhome, Teenhome, Dt_Customer, Recency
@@ -72,6 +84,10 @@ Customer segmentation transforms raw customer data into actionable business inte
 ---
 
 ### 4. Customer Segmentation Visualization (PCA)
+
+<p align="center">
+  <img src="./screenshots/pca.jpeg" width="800"/>
+</p>
 
 **Beautiful 2D PCA scatter plot:**
 - **5 color-coded clusters:**

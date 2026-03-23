@@ -42,7 +42,6 @@ Customer segmentation transforms raw customer data into actionable business inte
 ## 🖼️ Dashboard Screenshots
 
 ### 1. Dataset Preview & Cluster Distribution
-![Dataset Preview](screenshots/dataset_preview.png)
 
 **Features shown:**
 - Customer dataset table with ID, Year_Birth, Education, Marital_Status, Income, Kidhome, Teenhome, Dt_Customer, Recency
@@ -51,7 +50,6 @@ Customer segmentation transforms raw customer data into actionable business inte
 ---
 
 ### 2. Marketing Strategy Recommendations & Prediction Module
-![Marketing Recommendations](screenshots/marketing_recommendations.png)
 
 **Interactive features:**
 - **Dropdown selector** to choose customer cluster (0-4)
@@ -63,7 +61,6 @@ Customer segmentation transforms raw customer data into actionable business inte
 ---
 
 ### 3. Customer Segments Table
-![Segments Table](screenshots/segments_table.png)
 
 **Detailed customer data:**
 - Full customer list with all 2,240 customers
@@ -75,7 +72,6 @@ Customer segmentation transforms raw customer data into actionable business inte
 ---
 
 ### 4. Customer Segmentation Visualization (PCA)
-![Cluster Visualization](screenshots/cluster_visualization.png)
 
 **Beautiful 2D PCA scatter plot:**
 - **5 color-coded clusters:**
@@ -88,6 +84,8 @@ Customer segmentation transforms raw customer data into actionable business inte
 - Legend showing all 5 clusters
 - Professional matplotlib styling
 - X and Y axes representing PCA components
+
+> **📸 See Live Demo:** Visit the [live dashboard](https://customer-segmentation-dashboard-afbbjy6d7yns9ytcb6v6p2.streamlit.app/) to interact with all features in real-time!
 
 ---
 
@@ -174,7 +172,6 @@ st.dataframe(customer_segments_table)
 | **NumPy** | Numerical computations |
 | **Scikit-learn** | K-Means clustering, PCA, StandardScaler |
 | **Matplotlib** | PCA scatter plot visualization |
-| **Seaborn** | Enhanced statistical plots (not used in final version) |
 | **Streamlit** | Interactive web dashboard framework |
 | **Streamlit Cloud** | Free cloud deployment platform |
 
@@ -229,12 +226,6 @@ customer-segmentation-dashboard/
 ├── new.csv                 # Customer dataset (2,240 customers)
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project documentation (this file)
-│
-├── screenshots/            # Dashboard screenshots for README
-│   ├── dataset_preview.png
-│   ├── cluster_visualization.png
-│   ├── segments_table.png
-│   └── marketing_recommendations.png
 │
 └── model/
     ├── clustering_model.pkl    # Saved K-Means model

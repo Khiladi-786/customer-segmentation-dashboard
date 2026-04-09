@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+
+  dashboard:
+    build: .
+    container_name: segmentai_dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    volumes:
+      - ./models:/app/models
+      - ./artifacts:/app/artifacts
+      - ./mlruns:/app/mlruns
+      - ./new.csv:/app/new.csv
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
+    build: .
+    container_name: segmentai_api
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    volumes:
+      - ./models:/app/models
+      - ./new.csv:/app/new.csv
+    restart: unless-stopped
+
+  mlflow:
+    image: python:3.11-slim
+    container_name: segmentai_mlflow
+    command: >
+      sh -c "pip install mlflow -q &&
+             mlflow server --host 0.0.0.0 --port 5000
+             --backend-store-uri /mlruns
+             --default-artifact-root /mlruns"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    restart: unless-stopped
+
+volumes:
+  mlruns:
+  models:
+  artifacts:
